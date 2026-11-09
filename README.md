@@ -1,2 +1,2 @@
 # agent-guard
-FYP project repository
+FYP repository
