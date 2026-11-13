@@ -1,0 +1,18 @@
+# Python packages for the backend and the PoC.
+# Install them into the venv with: pip install -r requirements.txt
+# ">=" means this version or newer.
+
+# Web framework: defines the API endpoints and generates the /docs page
+fastapi>=0.115
+# Server that runs the FastAPI app and listens for HTTP requests on port 8000.
+uvicorn[standard]>=0.30
+# Database toolkit: manages connections now
+sqlalchemy>=2.0
+# Driver SQLAlchemy uses to actually talk to MySQL
+pymysql>=1.1
+# Needed by PyMySQL to log in to MySQL 8 (its default login method uses encryption)
+cryptography>=42
+# Loads the settings from the .env file into environment variables
+python-dotenv>=1.0
+# Client library used by the PoC to talk to Ollama's OpenAI-compatible API
+openai>=1.40
