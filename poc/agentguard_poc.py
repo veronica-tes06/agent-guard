@@ -61,9 +61,9 @@ print(f"Guardrail: {'ON' if GUARD_ON else 'OFF'}\n")
 for step in range(5):   # stop after 5 steps in case the agent loops
     reply = llm.chat.completions.create(model="qwen2.5:7b", messages=messages,
                                         tools=TOOLS).choices[0].message
-messages.append(reply)
+    messages.append(reply)
 
-    if not reply.tool_calls:          # agent has finished
+    if not reply.tool_calls: # agent has finished
         print("AGENT:", reply.content)
         break
 
