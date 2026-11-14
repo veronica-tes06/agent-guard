@@ -1,0 +1,25 @@
+# Docker Compose file: describes the containers this project needs.
+# Start them with "docker compose up -d", stop them with "docker compose stop".
+# Compose uses the folder name as the project name, so the container is called agent-guard-mysql-1.
+
+services:
+  mysql:
+    image: mysql:8.4
+
+    # Settings read by the image's startup script. Changing them has no effect unless the data volume is deleted with "docker compose down -v".
+    environment:
+      MYSQL_ROOT_PASSWORD: root      
+      MYSQL_DATABASE: agentguard    
+      MYSQL_USER: agentguard         
+      MYSQL_PASSWORD: agentguard  
+
+    ports:
+      - "3307:3306"
+
+    # Mount the named volume at MySQL's data folder, so the data survives the container being stopped, removed or recreated.
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+# Declares the named volume used above. Docker stores it and manages its location.
+volumes:
+  mysql_data:
