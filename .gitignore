@@ -8,6 +8,12 @@ venv/
 # real config values (may contain passwords); .env.example is committed instead
 .env
 
+# Node
+# installed JavaScript packages, rebuilt from package.json with npm install
+node_modules/
+# production build output from npm run build
+dist/
+
 # macOS folder metadata
 .DS_Store
 # JetBrains IDE settings
