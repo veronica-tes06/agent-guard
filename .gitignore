@@ -1,0 +1,22 @@
+# compiled bytecode Python creates automatically when importing modules
+__pycache__/
+# individual compiled files (.pyc, .pyo, .pyd)
+*.py[cod]
+# virtual environment: large and machine-specific, rebuilt from requirements.txt
+venv/
+.venv/
+# real config values (may contain passwords); .env.example is committed instead
+.env
+
+# Node
+# installed JavaScript packages, rebuilt from package.json with npm install
+node_modules/
+# production build output from npm run build
+dist/
+
+# macOS folder metadata
+.DS_Store
+# JetBrains IDE settings
+.idea/
+# VS Code settings
+.vscode/
